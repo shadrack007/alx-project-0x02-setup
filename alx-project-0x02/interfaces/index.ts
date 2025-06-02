@@ -14,3 +14,9 @@ export interface ACtiveLinkProps {
   activeClassName?: string;
   className?: string;
 }
+
+export interface PostProps {
+  title: string;
+  content: string;
+  userId: number;
+}
