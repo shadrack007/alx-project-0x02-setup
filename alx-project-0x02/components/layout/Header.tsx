@@ -1,15 +1,18 @@
-import Link from "next/link";
+import ActiveLink from "../common/ActiveLink";
 
 const Header: React.FC = () => {
   return (
-    <header>
+    <header className="bg-black w-full text-white py-4 px-3 text-lg">
       <nav>
-        <ul>
+        <ul className="flex gap-4 ">
           <li>
-            <Link href="/home">Home</Link>
+            <ActiveLink href="/home">Home</ActiveLink>
           </li>
           <li>
-            <Link href="/about">About</Link>
+            <ActiveLink href="/about">About</ActiveLink>
+          </li>
+          <li>
+            <ActiveLink href="/posts">Posts</ActiveLink>
           </li>
         </ul>
       </nav>
