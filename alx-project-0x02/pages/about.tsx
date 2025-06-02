@@ -1,9 +1,10 @@
 import Button from "@/components/common/Button";
+import Header from "@/components/layout/Header";
 
 const About: React.FC = () => {
   return (
     <section>
-      <h1>About page</h1>
+      <Header />
 
       <div className="flex flex-col items-center justify-center gap-2">
         <h1>small button</h1>

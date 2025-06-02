@@ -1,9 +1,10 @@
 import Card from "@/components/common/Card";
+import Header from "@/components/layout/Header";
 
 const Home: React.FC = () => {
   return (
     <section>
-      <h1>Home page</h1>
+      <Header />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
         <Card title="card 1" content="Card 1 content goes here" />
