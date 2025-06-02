@@ -14,6 +14,9 @@ const Header: React.FC = () => {
           <li>
             <ActiveLink href="/posts">Posts</ActiveLink>
           </li>
+          <li>
+            <ActiveLink href="/users">Users</ActiveLink>
+          </li>
         </ul>
       </nav>
     </header>
