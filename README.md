@@ -1,4 +1,4 @@
-# ALX Project 0x02: Next.js + TypeScript + Tailwind CSS
+# **Next.js Project Setup and Basics.**
 
 This project is a comprehensive introduction to building modern web applications using **Next.js**, **TypeScript**, and **Tailwind CSS**. It is designed to help you get familiar with setting up a scalable project, working with reusable components, managing routing, and integrating external APIs.
 
