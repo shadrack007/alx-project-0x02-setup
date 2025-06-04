@@ -2,7 +2,8 @@ import UserCard from "@/components/common/UserCard";
 import Header from "@/components/layout/Header";
 import { UserProps } from "@/interfaces";
 
-const Users: React.FC = ({ users }) => {
+const Users: React.FC = ({ posts }) => {
+  const users = posts;
   return (
     <section>
       <Header />
@@ -26,11 +27,11 @@ const Users: React.FC = ({ users }) => {
 export const getStaticProps = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/users");
 
-  const users = await res.json();
+  const posts = await res.json();
 
   return {
     props: {
-      users,
+      posts,
     },
   };
 };
