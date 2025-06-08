@@ -28,25 +28,27 @@ const Home: React.FC = () => {
 
   return (
     <section>
-      <Header />
+      <div className="z-10">
+        <Header />
 
-      <div className="flex justify-end my-4">
-        <button
-          onClick={handleNewPostModal}
-          className="bg-orange-700 font-semibold py-2 px-4 rounded-full text-white"
-        >
-          Add post
-        </button>
+        <div className="flex justify-end my-4">
+          <button
+            onClick={handleNewPostModal}
+            className="bg-orange-700 font-semibold py-2 px-4 rounded-full text-white"
+          >
+            Add post
+          </button>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+          {posts.map(({ title, content }: Post, index: number) => (
+            <Card title={title} content={content} key={index} />
+          ))}
+        </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-        {posts.map(({ title, content }: Post, index: number) => (
-          <Card title={title} content={content} key={index} />
-        ))}
-      </div>
-
-      <div className="absolute top-0 z-1 w-screen h-screen overflow-auto bg-black opacity-50">
-        <div className="flex items-center justify-center">
+      <div className="bg-black bg-opacity-50 inset-0">
+        <div className="flex items-center justify-center absolute bottom-[50px] w-full">
           {isModalShown && <PostModal handlePostAdd={handleAddPost} />}
         </div>
       </div>

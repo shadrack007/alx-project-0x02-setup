@@ -22,11 +22,14 @@ const PostModal = ({ handlePostAdd }: PostModalProps) => {
   };
 
   return (
-    <div className="bg-white w-1/2 items-center justify-center rounded-lg">
-      <form>
-        <div>
-          <label htmlFor="title">Title</label>
+    <div className="bg-white py-8 px-6 w-1/2 items-center justify-center rounded-lg">
+      <form className="flex flex-col gap-4">
+        <div className="space-y-5">
+          <label className="font-semibold" htmlFor="title">
+            Title
+          </label>
           <input
+            className="border-2 border-gray-400 focus:border-orange-700 w-full p-2 rounded-lg"
             type="text"
             name="title"
             value={title}
@@ -38,15 +41,18 @@ const PostModal = ({ handlePostAdd }: PostModalProps) => {
           />
         </div>
 
-        <div>
-          <label htmlFor="content">Title</label>
-          <input
-            type="text"
+        <div className="space-y-5">
+          <label className="font-semibold" htmlFor="content">
+            Content
+          </label>
+          <textarea
+            className="border-2 border-gray-400 focus:border-orange-700 w-full p-2 rounded-lg"
             name="content"
             value={content}
+            rows={5}
             id="content"
-            placeholder="Title"
-            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+            placeholder="Content ...."
+            onChange={(e: ChangeEvent<HTMLTextAreaElement>) =>
               setContent(e.target.value)
             }
           />
