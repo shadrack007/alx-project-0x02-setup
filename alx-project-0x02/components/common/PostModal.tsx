@@ -1,7 +1,7 @@
 import { PostModalProps } from "@/interfaces";
 import { ChangeEvent, useState } from "react";
 
-const PostModal: React.FC<PostModalProps> = ({ handlePostAdd }) => {
+const PostModal = ({ handlePostAdd }: PostModalProps) => {
   const [title, setTitle] = useState<string>("");
   const [content, setContent] = useState<string>("");
 
