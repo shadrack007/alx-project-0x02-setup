@@ -37,3 +37,12 @@ interface Address {
     lng: string;
   };
 }
+
+export interface Post {
+  title: string;
+  content: string;
+}
+
+export interface PostModalProps {
+  handlePostAdd: (newPost: Post) => void;
+}
